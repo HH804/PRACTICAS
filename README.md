@@ -3,11 +3,11 @@
 Materiales:
 
 ```
--Arduino uno
--lcd 16x2
--Sensor dht 11
--Protoboard
--Jumpers
+• Arduino uno
+• Lcd 16x2
+• Sensor DHT 11
+• Protoboard
+• Jumpers
 ```
 ![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%201%20-%20EVIDENCIA%201.jpeg).
 
@@ -16,9 +16,9 @@ Materiales:
 Materiales:
 
 ```
--Arduino uno
--lcd 16x2 con keypad
--Sensor dht 22
--Protoboard
--Jumpers
+• Arduino uno
+• Lcd 16x2 con keypad
+• Sensor DHT 22
+• Protoboard
+• Jumpers
 ```
