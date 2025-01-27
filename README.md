@@ -9,6 +9,7 @@ Materiales:
 -Protoboard
 -Jumpers
 ```
+![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%201%20-%20EVIDENCIA%201.jpeg).
 
 # PRACTICA 2
 ### ARDUINO Y SENSOR DHT22
