@@ -7,4 +7,4 @@ Materiales:
 -Protoboard
 -Jumpers
 
-#PRACTICA 2
+# PRACTICA 2
