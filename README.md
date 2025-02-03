@@ -22,3 +22,16 @@ Materiales:
 • Protoboard
 • Jumpers
 ```
+
+# PRACTICA 3
+### ThingSpeak y sensor DHT22
+Materiales:
+
+```
+• Arduino uno
+• Esp 32
+• Sensor DHT 22
+• Protoboard
+• Jumpers
+```
+![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%203%20-%20EVIDENCIA%201.jpeg)
