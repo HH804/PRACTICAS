@@ -22,7 +22,7 @@ Materiales:
 • Protoboard
 • Jumpers
 ```
-![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%202%20-%20EVIDENCIA%201.jpeg)
+![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%202%20-%20EVIDENCIA%201.jpg)
 
 # PRACTICA 3
 ### ESP 32, THINGSPEAK Y SENSOR DHT22
@@ -34,4 +34,4 @@ Materiales:
 • Protoboard
 • Jumpers
 ```
-![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%203%20-%20EVIDENCIA.jpeg)
+![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%203%20-%20EVIDENCIA.jpg)
