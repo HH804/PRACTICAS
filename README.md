@@ -24,14 +24,13 @@ Materiales:
 ```
 
 # PRACTICA 3
-### ThingSpeak y sensor DHT22
+### ESP 32, THINGSPEAK Y SENSOR DHT22
 Materiales:
 
 ```
-• Arduino uno
-• Esp 32
+• ESP 32
 • Sensor DHT 22
 • Protoboard
 • Jumpers
 ```
-![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%203%20-%20EVIDENCIA%201.jpeg)
+![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%203%20-%20EVIDENCIA%20.jpeg)
