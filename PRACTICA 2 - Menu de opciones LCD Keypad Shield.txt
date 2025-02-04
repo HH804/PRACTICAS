@@ -1,0 +1,97 @@
+#include <LiquidCrystal.h>
+#include <DHT.h>
+
+// Configuración del LCD Keypad Shield
+LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
+
+// Configuración del sensor DHT22
+#define DHTPIN 2        // Pin al que está conectado el DHT22
+#define DHTTYPE DHT22   // Definir el tipo de sensor como DHT22
+DHT dht(DHTPIN, DHTTYPE); // Crear objeto para el sensor
+// Definición de valores de botones con tolerancia de ±15
+#define UP_MIN 115
+#define UP_MAX 145
+#define DOWN_MIN 290
+#define DOWN_MAX 325
+#define LEFT_MIN 470
+#define LEFT_MAX 500
+#define SELECT_MIN 705
+#define SELECT_MAX 745
+
+int contadorDown = 0; // Contador de presiones del botón DOWN
+bool downPresionado = false; // Para evitar múltiples lecturas en una sola pulsación
+unsigned long tiempoUltimaPresion = 0; // Guarda el tiempo de la última pulsación
+const unsigned long intervaloCambio = 1000; // Tiempo de espera entre cambios (2000ms = 2 segundos)
+
+void setup() {
+  lcd.begin(16, 2);
+  lcd.print("Menu Iniciado");
+  delay(2000);
+  lcd.clear();
+  dht.begin();  // Inicializar el sensor DHT22
+}
+
+void loop() {
+  int btn = analogRead(A0); // Leer el valor del botón presionado
+  unsigned long tiempoActual = millis(); // Obtener el tiempo actual
+
+  // Si el botón UP está presionado
+  if (btn >= UP_MIN && btn <= UP_MAX) {
+    lcd.clear();
+    lcd.print("Sistemas Embebidos");
+    lcd.setCursor(0, 1);
+    lcd.print("Practica 2");
+    delay(1000);
+  } 
+  // Si el botón DOWN está presionado
+  else if (btn >= DOWN_MIN && btn <= DOWN_MAX) {
+    if (!downPresionado && (tiempoActual - tiempoUltimaPresion > intervaloCambio)) {
+      downPresionado = true;
+      tiempoUltimaPresion = tiempoActual;
+      contadorDown++;
+
+      lcd.clear(); 
+
+      if (contadorDown == 1) {
+        lcd.print("Equipo 1");
+        lcd.setCursor(0, 1);
+        lcd.print("Aldo, Milca");
+      } else if (contadorDown == 2) {
+        lcd.print("Equipo2 Celeste");
+        lcd.setCursor(0, 1);
+        lcd.print("Vanessa, Jesica");
+      } else if (contadorDown == 3) {
+        lcd.print("Equipo 3");
+        lcd.setCursor(0, 1);
+        lcd.print("Rolando, Emily");
+        contadorDown = 0; // Resetea el contador después del equipo 3
+      }
+
+      delay(2000);
+    }
+  } 
+  // Si el botón LEFT está presionado (Mostrar humedad)
+  else if (btn >= LEFT_MIN && btn <= LEFT_MAX) {
+    float humedad = dht.readHumidity(); // Leer humedad
+    lcd.clear();
+    lcd.print("Humedad: ");
+    lcd.print(humedad);
+    lcd.print("%");
+    delay(2000);
+  } 
+  // Si el botón SELECT está presionado (Mostrar temperatura)
+  else if (btn >= SELECT_MIN && btn <= SELECT_MAX) {
+    float temperatura = dht.readTemperature(); // Leer temperatura
+    lcd.clear();
+    lcd.print("Temperatura:");
+    lcd.print(temperatura);
+    lcd.print("C");
+    delay(2000);
+  } 
+  // Si ningún botón está presionado
+  else {
+    downPresionado = false;
+  }
+
+  delay(100); // Pausa para evitar lecturas repetidas
+}
