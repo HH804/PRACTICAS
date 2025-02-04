@@ -8,6 +8,7 @@ LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
 #define DHTPIN 2        // Pin al que está conectado el DHT22
 #define DHTTYPE DHT22   // Definir el tipo de sensor como DHT22
 DHT dht(DHTPIN, DHTTYPE); // Crear objeto para el sensor
+
 // Definición de valores de botones con tolerancia de ±15
 #define UP_MIN 115
 #define UP_MAX 145
@@ -43,6 +44,7 @@ void loop() {
     lcd.print("Practica 2");
     delay(1000);
   } 
+
   // Si el botón DOWN está presionado
   else if (btn >= DOWN_MIN && btn <= DOWN_MAX) {
     if (!downPresionado && (tiempoActual - tiempoUltimaPresion > intervaloCambio)) {
@@ -51,7 +53,6 @@ void loop() {
       contadorDown++;
 
       lcd.clear(); 
-
       if (contadorDown == 1) {
         lcd.print("Equipo 1");
         lcd.setCursor(0, 1);
@@ -66,10 +67,10 @@ void loop() {
         lcd.print("Rolando, Emily");
         contadorDown = 0; // Resetea el contador después del equipo 3
       }
-
       delay(2000);
     }
   } 
+
   // Si el botón LEFT está presionado (Mostrar humedad)
   else if (btn >= LEFT_MIN && btn <= LEFT_MAX) {
     float humedad = dht.readHumidity(); // Leer humedad
@@ -79,6 +80,7 @@ void loop() {
     lcd.print("%");
     delay(2000);
   } 
+
   // Si el botón SELECT está presionado (Mostrar temperatura)
   else if (btn >= SELECT_MIN && btn <= SELECT_MAX) {
     float temperatura = dht.readTemperature(); // Leer temperatura
@@ -88,10 +90,10 @@ void loop() {
     lcd.print("C");
     delay(2000);
   } 
-  // Si ningún botón está presionado
+  
+// Si ningún botón está presionado
   else {
     downPresionado = false;
   }
-
   delay(100); // Pausa para evitar lecturas repetidas
 }
