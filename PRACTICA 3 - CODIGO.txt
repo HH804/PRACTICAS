@@ -7,7 +7,6 @@
 #define DHTTYPE DHT22     // Tipo de sensor
 
 DHT dht(DHTPIN, DHTTYPE);
-
 char ssid[] = SECRET_SSID;
 char pass[] = SECRET_PASS;
 WiFiClient client;
@@ -60,6 +59,5 @@ void loop() {
       Serial.println("Error al enviar datos. Código HTTP: " + String(x));
     }
   }
-
   delay(2000); // Esperar 2 segundos para la próxima actualización
 }
