@@ -34,4 +34,4 @@ Materiales:
 • Protoboard
 • Jumpers
 ```
-![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%203%20-%20EVIDENCIA.jpg)
+![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%203%20-%20EVIDENCIA%201.jpg)
