@@ -36,17 +36,7 @@ Materiales:
 ```
 ![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%203%20-%20EVIDENCIA%201.jpg)
 
-# PRACTICA 3
-### ESP 32, THINGSPEAK Y SENSOR DHT22
-Materiales:
-
-```
-• ESP 32
-• Sensor DHT 22
-• Protoboard
-• Jumpers
-```
-![Evidencia.](# PRACTICA 4
+# PRACTICA 4
 ### ESP 32, SENSOR DHT22 Y SENSOR DE PRESIÓN
 Materiales:
 
@@ -57,4 +47,4 @@ Materiales:
 • Protoboard
 • Jumpers
 ```
-![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%203%20-%20EVIDENCIA%201.jpg))
+![Evidencia.](https://github.com/HH804/PRACTICAS/blob/main/PRACTICA%204%20-%20EVIDENCIA%201.jpg)
